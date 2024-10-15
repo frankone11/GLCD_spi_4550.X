@@ -31,7 +31,7 @@ GLCD_Comando_Serial:
 	andlw 0F0h
 	call SPI_Tranceive
 	bcf PORTD, PORTD_RD3_POSN, a
-	Delay1K 2
+	Delay100 4
 	return
 	
 GLCD_Dato_Serial:
@@ -46,7 +46,7 @@ GLCD_Dato_Serial:
 	andlw 0F0h
 	call SPI_Tranceive
 	bcf PORTD, PORTD_RD3_POSN, a
-	Delay1K 2
+	Delay100 4
 	return
 
 GLCD_Inicializa_Serial:

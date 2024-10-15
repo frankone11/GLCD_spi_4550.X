@@ -4,7 +4,7 @@ psect code
 	
 SPI_Inicializa:
 	global SPI_Inicializa
-	movlw SSP1CON1_SSPEN_MASK | SSP1CON1_CKP_MASK | 0x02
+	movlw SSP1CON1_SSPEN_MASK | SSP1CON1_CKP_MASK
 	movwf SSP1CON1, a
 	return
 

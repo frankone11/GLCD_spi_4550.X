@@ -8,6 +8,19 @@ ret2:
     ds 1
 
 	psect code
+ 
+delay_10:
+	global delay_10
+	movwf retardo,a
+ciclo0_10:
+	movlw 5
+	movwf ret1, a
+ciclo1_10:
+	decfsz ret1, a
+	bra ciclo1_10
+	decfsz retardo, a
+	bra ciclo0_10
+	return
 
 delay_100:
 	global delay_100

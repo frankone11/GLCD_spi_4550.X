@@ -4,7 +4,12 @@
 EXTRN delay_100
 EXTRN delay_1k
 EXTRN delay_10k
-
+EXTRN delay_10
+	
+Delay10 macro tiempo
+	movlw tiempo
+	call delay_10
+	endm
 
 Delay100 macro tiempo
 	movlw tiempo

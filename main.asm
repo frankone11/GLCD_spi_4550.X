@@ -31,16 +31,20 @@ psect	code
 main:
 	movlw 0E0h
 	movwf OSCCON, a
-	movlw 0Fh
-	movwf ADCON1, a
-	bsf LATC, 7, a
+	;movlw 0Fh
+	;movwf ADCON1, a
+	clrf ANSELB, a
+	clrf ANSELD, a
+
 	bsf LATB, 1, a
-	bsf LATD, 3, a
+	bsf LATB, 3, a
+	bcf LATD, 3, a
+	//bsf LATC, 7, a
 	
-	bcf TRISC, 7, a
 	bcf TRISB, 1, a
-	bsf TRISB, 0, a
+	bcf TRISB, 3, a
 	bcf TRISD, 3, a
+	//bcf TRISC, 7, a
 	
 	call SPI_Inicializa
 	call GLCD_Inicializa_Serial
